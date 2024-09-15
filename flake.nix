@@ -28,7 +28,8 @@
     flake-compat.url = "https://flakehub.com/f/edolstra/flake-compat/1.tar.gz";
 
     git-hooks = {
-      url = "github:cachix/git-hooks.nix";
+      # Locked due to regression, see https://github.com/nix-community/nixvim/pull/2188
+      url = "github:cachix/git-hooks.nix/4509ca64f1084e73bc7a721b20c669a8d4c5ebe6";
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.nixpkgs-stable.follows = "nixpkgs";
     };
